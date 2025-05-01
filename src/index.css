@@ -1,0 +1,126 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* src/components/index.css */
+
+/* Hover effect for the logo */
+.logo-link {
+  display: inline-block;
+  transition: transform 0.3s ease, opacity 0.3s ease, filter 0.3s ease;
+}
+
+/* Adding animation for logo when hovered */
+.logo-link:hover .logo-image {
+  transform: scale(1.1) rotate(10deg); /* Scale and rotate on hover */
+  opacity: 0.8; /* Slight opacity change */
+  filter: brightness(1.2); /* Slight brightness increase */
+}
+
+/* Optional: Add smooth transition for any changes */
+.logo-image {
+  transition: transform 0.3s ease, opacity 0.3s ease, filter 0.3s ease;
+}
+
+/* Hover effect for logo link */
+.logo-link:hover {
+  cursor: pointer;
+  transform: scale(1.05); /* Slight scaling of the logo link */
+  filter: brightness(1.1); /* Slight brightness increase for the link */
+}
+
+/* Add this in your index.css or appropriate CSS file */
+.loading-indicator {
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: #555;
+  margin-top: 50px;
+}
+
+/* Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  width: 80%;
+  max-width: 600px;
+  position: relative;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.close-modal {
+  background-color: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.product-image-views {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 10px;
+}
+
+.top-view, .left-view, .right-view, .bottom-view {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.view-image {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+}
+
+.top-view {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+.left-view {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+}
+
+.right-view {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+}
+
+.bottom-view {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
